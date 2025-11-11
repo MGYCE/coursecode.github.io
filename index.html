@@ -2,11 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Course Code Selector</title>
+  <title>Exam Code Selector</title>
   <script>
     function getSubjectDetails() {
       const subjects = {
-        "MGYCEDCA03": "Diploma in Computer Application (12 Months)",
+        "DCA202501": "MS Office (Word & Excel)",
+        "DCA202502": "Windows (Shortcut Key & Operating System)",
       };
 
       const code = document.getElementById("subjectCode").value;
@@ -19,9 +20,10 @@
   <h2>Select Course Code</h2>
   <select id="subjectCode" onchange="getSubjectDetails()">
     <option value="">--Select--</option>
-    <option value="MGYCEDCA03">MGYCEDCA03</option>
+    <option value="DCA202501">DCA202501</option>
+    <option value="DCA202502">DCA202502</option>
   </select>
 
-  <p><strong>Subject Details:</strong> <span id="subjectDetails">Select a Course to see details.</span></p>
+  <p><strong>Subject Details:</strong> <span id="subjectDetails">Select a Exam Code to see Details.</span></p>
 </body>
 </html>
