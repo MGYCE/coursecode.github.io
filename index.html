@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Course Code Selector</title>
+  <script>
+    function getSubjectDetails() {
+      const subjects = {
+        "MGYCEDCA03": "Diploma in Computer Application (12 Months)",
+      };
+
+      const code = document.getElementById("subjectCode").value;
+      const details = subjects[code] || "No details available.";
+      document.getElementById("subjectDetails").textContent = details;
+    }
+  </script>
+</head>
+<body>
+  <h2>Select Subject Code</h2>
+  <select id="subjectCode" onchange="getSubjectDetails()">
+    <option value="">--Select--</option>
+    <option value="MGYCEDCA03">MGYCEDCA03</option>
+  </select>
+
+  <p><strong>Subject Details:</strong> <span id="subjectDetails">Select a Course to see details.</span></p>
+</body>
+</html>
